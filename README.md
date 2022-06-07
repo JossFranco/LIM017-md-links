@@ -78,7 +78,7 @@ Unique: 4
 ```
 Los valores de retorno son:
 
- *  `Total`: total de links encontrados en archivos Markdown
+ *  `Total`: total de links encontrados en archivos Markdown.
  * `Unique`: total de links únicos.
 
 * ### `--validate --stats o --stats --validate`
@@ -96,7 +96,7 @@ Broken: 3
 ```
 Los valores de retorno son:
 
-* `Total`: total de links encontrados en archivos Markdown
+* `Total`: total de links encontrados en archivos Markdown.
 * `Unique`: total de links únicos.
 * `Broken`: total de links rotos.
 
