@@ -33,7 +33,7 @@ href: https://www.geeksforgeeks.org/how-to-run-node-js-program-as-an-executable/
 text: a link
 file: C:\Users\Joss\Documents\GitHub\LIM017-md-links\exampleFile
 ```
-### 2.2.1 Opciones 
+### 2.2.1 Opciones ⚗️
 
 * ### `--validate`
 
@@ -83,11 +83,14 @@ Unique: 4
 Broken: 3
 ```
 
-## 3. Liberías empleadas
+## 3. Liberías empleadas 📚
 
 - [File-Sytem](https://nodejs.org/dist/latest-v17.x/docs/api/fs.html#file-system)
-- [Path](https://nodejs.org/dist/latest-v17.x/docs/api/path.html)
-- [Node-Fetch*](https://www.npmjs.com/package/node-fetch)
+- [Path module](https://nodejs.org/dist/latest-v17.x/docs/api/path.html)
+- [Node-fetch](https://nodejs.org/dist/latest-v17.x/docs/api/fs.html#file-system)
+- [Marked](https://www.npmjs.com/package/marked)
+- [chalk](https://www.npmjs.com/package/chalk/v/4.1.0) 
+- [jest](https://jestjs.io/docs/api) 
 
 
 ## Author ✒️
