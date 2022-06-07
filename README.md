@@ -100,7 +100,13 @@ Los valores de retorno son:
 * `Unique`: total de links únicos.
 * `Broken`: total de links rotos.
 
-## 3. Liberías empleadas 📚
+## 3. Proceso de desarrollo:
+Diagrama de flujo API
+![Diagrama de flujo API](https://github.com/JossFranco/LIM017-md-links/blob/main/DiagramaDeFlujo/Diagrama%20API.png)
+Diagrama de flujo CLI
+![Diagrama de flujo CLI](https://github.com/JossFranco/LIM017-md-links/blob/main/DiagramaDeFlujo/Diagrama%20CLI.png)
+
+## 4. Liberías empleadas 📚
 
 - [File-Sytem](https://nodejs.org/dist/latest-v17.x/docs/api/fs.html#file-system)
 - [Path module](https://nodejs.org/dist/latest-v17.x/docs/api/path.html)
