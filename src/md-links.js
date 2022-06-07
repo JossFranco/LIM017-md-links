@@ -64,8 +64,6 @@ const gettinlinks = (arrPath) => {
     });
   }
   return arrLinks;
-
-
 };
 
 const statusLinks = (arrLinks) => {
