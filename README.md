@@ -58,11 +58,11 @@ ok: fail
 ```
 Los valores de retorno son:
 
-  `href`: URL encontrada.
-  `text`: Texto que aparecía dentro del link (`<a>`).
-  `file`: Ruta del archivo donde se encontró el link.
-  `status`: Código de respuesta HTTP.
-  `ok`: Mensaje `fail` en caso de fallo u `ok` en caso de éxito.
+ *  `href`: URL encontrada.
+ *  `text`: Texto que aparecía dentro del link.
+ *  `file`: Ruta del archivo donde se encontró el link.
+ *  `status`: Código de respuesta HTTP.
+ *  `ok`: Mensaje `fail` en caso de fallo u `ok` en caso de éxito.
 
 * ### `--stats`
 
@@ -76,8 +76,10 @@ $ md-Links ./exampleFile --stats
 Total: 12
 Unique: 4
 ```
-  `Total`: total de links encontrados en archivos Markdown
-  `Unique`: total de links únicos.
+Los valores de retorno son:
+
+ *  `Total`: total de links encontrados en archivos Markdown
+ * `Unique`: total de links únicos.
 
 * ### `--validate --stats o --stats --validate`
 
