@@ -83,12 +83,14 @@ Unique: 4
 Broken: 3
 ```
 
+## 3. Liberías empleadas
+
+- [File-Sytem](https://nodejs.org/dist/latest-v17.x/docs/api/fs.html#file-system)
+- [Path](https://nodejs.org/dist/latest-v17.x/docs/api/path.html)
+- [Node-Fetch*](https://www.npmjs.com/package/node-fetch)
 
 
-
-
-
-
-
+## Author ✒️
+[Joseline Franco Herrera](https://github.com/JossFranco)
 
 
