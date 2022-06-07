@@ -56,6 +56,14 @@ file: C:\Users\Joss\Documents\GitHub\LIM017-md-links\exampleFile\README.md
 status: Fail: Your request failed
 ok: fail
 ```
+Los valores de retorno son:
+
+  `href`: URL encontrada.
+  `text`: Texto que aparecía dentro del link (`<a>`).
+  `file`: Ruta del archivo donde se encontró el link.
+  `status`: Código de respuesta HTTP.
+  `ok`: Mensaje `fail` en caso de fallo u `ok` en caso de éxito.
+
 * ### `--stats`
 
 Si pasamos la opción `--stats` nos retornara las estadisticas (total de los links y los links únicos) de las carpetas u archivos ingresados.
@@ -68,6 +76,8 @@ $ md-Links ./exampleFile --stats
 Total: 12
 Unique: 4
 ```
+  `Total`: total de links encontrados en archivos Markdown
+  `Unique`: total de links únicos.
 
 * ### `--validate --stats o --stats --validate`
 
@@ -82,6 +92,11 @@ Total: 12
 Unique: 4
 Broken: 3
 ```
+Los valores de retorno son:
+
+* `Total`: total de links encontrados en archivos Markdown
+* `Unique`: total de links únicos.
+* `Broken`: total de links rotos.
 
 ## 3. Liberías empleadas 📚
 
