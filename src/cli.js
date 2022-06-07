@@ -20,17 +20,17 @@ const chalk = require('chalk');
      else if(args.length === 2 && args.includes('--validate')) {
       mdLinks(args[0], {validate:true})
       .then((result) =>{
-        result.forEach(element => console.log(chalk.bold.blueBright`${('href:')} ${(element.href)})\n${('text:')} ${(element.text)}\n${('file:')} ${(element.file)}\n${('status:')} ${(element.status)}\n${('ok:')} ${(element.ok)}\n`))
+        result.forEach(element => console.log(chalk.bold.blueBright`${('href:')} ${(element.href)}\n${('text:')} ${(element.text)}\n${('file:')} ${(element.file)}\n${('status:')} ${(element.status)}\n${('ok:')} ${(element.ok)}\n`))
       })//href, text, file, status, ok
       .catch(console.error);
-  
+    
 
      } else if(args.length === 2 &&  args.includes('--stats')){
       mdLinks(args[0], {validate:true})
       .then((result) =>{
         const unique = [...new Set(result.map((element) => element.href))].length;
         const total = result.length;
-        console.log(`${('Total:')} ${(total)}\n${('Unique:')} ${(unique)}`)// Total, Unique
+        console.log(chalk.bold.magentaBright`${('Total:')} ${(total)}\n${('Unique:')} ${(unique)}`)// Total, Unique
       });
       
     
@@ -40,7 +40,7 @@ const chalk = require('chalk');
         const unique = [...new Set(result.map((element) => element.href))].length;
         const total = result.length;
         const broken = result.filter((element) => element.ok === 'fail').length; 
-        console.log(`${('Total:')} ${(total)}\n${('Unique:')} ${(unique)}\n${('Broken:')} ${(broken)}`) // Total, Unique, Broken
+        console.log(chalk.bold.greenBright`${('Total:')} ${(total)}\n${('Unique:')} ${(unique)}\n${('Broken:')} ${(broken)}`) // Total, Unique, Broken
       })
       .catch(console.error);
     }
