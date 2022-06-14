@@ -38,9 +38,7 @@
     "npm-cli": "^0.1.0",
     "path": "^0.11.14"
   },
-  "bugs": {
-    "url": "https://github.com/JossFranco/LIM017-md-links/issues"
-  },
+  
   "homepage": "https://github.com/JossFranco/LIM017-md-links#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.23.0",

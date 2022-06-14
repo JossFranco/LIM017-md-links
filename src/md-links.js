@@ -11,8 +11,6 @@ const convertToAbsolute = (inputPath) => {
     return path.resolve(inputPath);
   }
 };
-
-
 const verifyDirectory = (inputPath) => {
   getInformation = fs.statSync(inputPath);
   return getInformation.isDirectory();
@@ -24,7 +22,6 @@ const openedDirectory = (inputPath) => {
   listFiles.forEach((file) => {
     const pathChild = path.resolve(inputPath, file);
     if (fs.statSync(pathChild).isFile()) {
-
       arrayFiles.push(pathChild);
     } else {
       const directory = openedDirectory(pathChild);
@@ -34,7 +31,8 @@ const openedDirectory = (inputPath) => {
   return arrayFiles;
 };
 
-const filterFile = (array) => array.filter(file => path.extname(file) == ".md");
+const filterFile = (array) =>
+  array.filter((file) => path.extname(file) == ".md");
 
 const gettinlinks = (arrPath) => {
   const regExp = /\[(.*)\]\(((?:\/|https?:\/\/).*)\)/gi;
@@ -42,11 +40,9 @@ const gettinlinks = (arrPath) => {
   const regExpURL = /\(((?:\/|https?:\/\/).*)\)/g;
   let arrLinks = [];
   if (arrPath.length > 0 && Array.isArray(arrPath)) {
-   
     arrPath.forEach((path) => {
       const contents = fs.readFileSync(path, "utf8");
       const arrLinksFile = contents.match(regExp);
-    
       if (arrLinksFile) {
         let arrayDataFile = [];
         arrLinksFile.forEach((link) => {
@@ -54,7 +50,7 @@ const gettinlinks = (arrPath) => {
           const resolveText = link.match(regExpText).join().slice(1, -1);
           const object = {
             href: resolveLinks,
-            text: resolveText.substring(0, 50),
+            text: resolveText.substring(0, 49),
             file: path,
           };
           arrayDataFile.push(object);
@@ -68,30 +64,31 @@ const gettinlinks = (arrPath) => {
 
 const statusLinks = (arrLinks) => {
   const array = arrLinks.map((element) => {
-      const fetchPromise = fetch(element.href)
+    const fetchPromise = fetch(element.href)
       .then((response) => {
         const statusCode = response.status;
-        const msg = response.status >= 200 && response.status <= 299 ? 'OK' : 'FAIL';
+        const msg =
+          response.status >= 200 && response.status <= 299 ? "OK" : "FAIL";
         return {
           href: element.href,
           text: element.text,
           file: element.file,
           status: statusCode,
           ok: msg,
-        
-
         };
       })
-      .catch(() => ({href: element.href, text: element.text, file: element.file,
-        status: 'Fail: Your request failed', 
-        ok: 'fail',
+      .catch(() => ({
+        href: element.href,
+        text: element.text,
+        file: element.file,
+        status: "Fail: Your request failed",
+        ok: "fail",
       }));
-    
-      return fetchPromise;
+
+    return fetchPromise;
   });
-    return Promise.all(array);
-  
-  };
+  return Promise.all(array);
+};
 
 module.exports = {
   existRoute,
@@ -100,5 +97,5 @@ module.exports = {
   openedDirectory,
   filterFile,
   gettinlinks,
-  statusLinks
+  statusLinks,
 };
